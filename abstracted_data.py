@@ -36,4 +36,3 @@ def get_range(user_list):
     return f'The range of the values {user_list} is {d_range}'
 
 
-print(get_range([23, 56, 78, 44, 30, 91, 25]))
