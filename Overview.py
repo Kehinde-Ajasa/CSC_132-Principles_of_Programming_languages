@@ -85,3 +85,50 @@ def Aliasing():
     affects the first number value of 80, which makes the code no longer safe."""
     pass
     """To prevent this multiple reference creation is prohibited"""
+
+    """This module helps in checking if a number is prime or not.
+    Prime numbers are numbers that can only divide 1 and itself without reminder
+    examples are 2, 3, 5 etc"""
+    """How it works
+    This module accepts a user input and loops through all number from 2 to that input
+     then divides the user input by all numbers gotten from the loop.
+     it adds this result to a list, if 0 is in the list, user_input is Not prime, if 0 is not
+     user input is prime"""
+
+
+# Project 4
+def is_prime_number(user_input):
+        """An approach to check if a number is prime or not."""
+        remainder_list = list()
+        if user_input == 2:
+            return 1
+        else:
+            for i in range(2, user_input):
+                remainder_list.append(user_input % i)  # adding the remainder of the loop to a list
+            if 0 in remainder_list:
+                return 0  # false the user_number is not a prime number
+            else:
+                return 1  # True the user_number is a prime number
+
+"""This program helps in multiplying an amount of prime numbers
+program must first check if number entered by user are prime or not"""
+
+# Project 5
+def user_input():
+    """Accepting all user's input and performing operation"""
+    product = 1
+    prime_number_list = list()
+    amount_of_numbers = int(input("How many prime numbers do you want to multiply: "))
+    for i in range(1, amount_of_numbers + 1):
+        p_number = int(input(f"Enter your {i} number: "))
+        while (is_prime_number(p_number)) != 1:
+            print("The number you entered is not a prime number, Try again")
+            p_number = int(input(f"Enter your {i} number: "))
+        if is_prime_number(p_number) == 1:
+            prime_number_list.append(p_number)
+            product *= p_number
+
+    return f'The Product of the prime numbers {prime_number_list} is {product}'
+
+print(user_input())
+
