@@ -20,13 +20,4 @@ def user_input():
 
     return f'The Product of the prime numbers {prime_number_list} is {product}'
 
-
-"""def multiply_numbers(num):
-    product = 1
-    for k in num:
-        product *= k
-
-    return product"""
-
-
 print(user_input())
