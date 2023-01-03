@@ -10,13 +10,4 @@ This module accepts a user input and loops through all number from 2 to that inp
 
 def is_prime_number(user_input):
     """An approach to check if a number is prime or not."""
-    remainder_list = list()
-    if user_input == 2:
-        return 1
-    else:
-        for i in range(2, user_input):
-            remainder_list.append(user_input % i)  # adding the remainder of the loop to a list
-        if 0 in remainder_list:
-            return 0  # false the user_number is not a prime number
-        else:
-            return 1  # True the user_number is a prime number
+    return sum([1 if user_input%q == 0 else 0 for q in range(1, user_input+1)]) == 2
