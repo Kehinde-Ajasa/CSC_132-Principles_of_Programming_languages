@@ -1,5 +1,6 @@
 import random
 import getpass
+
 """Description for the modules above"""
 
 """ Random: The random module randomly selects a value from computer_game_options as the computers choice"""
@@ -11,8 +12,7 @@ choice without displaying it """
 def single_player(player_input):
     """This function compares player_input with the computers_choice and picks a winner """
     player_input_upper = player_input.upper()
-    computer_game_options = ["ROCK", "PAPER", "SCISSORS"]
-    computer_choice = random.choice(computer_game_options)
+    computer_choice = random.choice(game_options)
     if computer_choice == "ROCK":
         if player_input_upper == "ROCK":
             return "draw"
@@ -69,20 +69,29 @@ def multiplayer(player1, player2):
 print('Game Modes: "Enter 1 for single player", "Enter 2 for multiplayer player" \n')
 game_mode = input('Enter game mode choice: ')
 print('Enter "E" to end the game')
+"""List of values that the game permits from players"""
+game_options = ["ROCK", "PAPER", "SCISSORS"]
 if game_mode == "1":
     while True:
         player_choice = input('Rock, Paper or Scissors: ')
-        if player_choice.upper() == 'E':
-            break
+        if player_choice.upper() in game_options:
+            if player_choice.upper() == 'E':
+                break
+            else:
+                print(single_player(player_choice))
         else:
-            print(single_player(player_choice))
+            print('Enter proper value')
 elif game_mode == '2':
     while True:
         player1_choice = getpass.getpass(prompt="Player1 ROCK PAPER SCISSORS: ")
         player2_choice = getpass.getpass(prompt="Player2 ROCK PAPER SCISSORS: ")
-        if player1_choice.upper() == "E" or player2_choice.upper() == "E":
-            break
+        if player1_choice.upper() in game_options and player2_choice.upper() in game_options:
+            if player1_choice.upper() == "E" or player2_choice.upper() == "E":
+                break
+            else:
+                print(multiplayer(player1_choice, player2_choice))
         else:
-            print(multiplayer(player1_choice, player2_choice))
+            print('Enter proper value')
+
 else:
     print('No game mode chosen')
