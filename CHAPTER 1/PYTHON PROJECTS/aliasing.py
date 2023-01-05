@@ -6,8 +6,8 @@ when two different memory location contains the same data"""
 def Aliasing():
     first_number = 80
     second_number = first_number
-    """The assignment of the second_number to the first number is termed aliasing
+    """The assignment of the second_number to the first character_change is termed aliasing
     and the main disadvantage is that if the second_number is edited or deleted, it
-    affects the first number value of 80, which makes the code no longer safe."""
+    affects the first character_change value of 80, which makes the code no longer safe."""
     pass
     """To prevent this multiple reference creation is prohibited"""

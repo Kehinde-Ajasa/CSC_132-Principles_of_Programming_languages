@@ -1,6 +1,6 @@
 """
 Factorial in mathematics is the result of multiplying
-consecutive INTEGERS from 1 to the given number.
+consecutive INTEGERS from 1 to the given character_change.
 It's denoted with '!'
 as in; n! = 1 * 2 * 3 * (n-1) * n
 """
@@ -8,7 +8,7 @@ as in; n! = 1 * 2 * 3 * (n-1) * n
 # First, we create a Function; called Factorial
 # This is the function that computes the value of the factorial
 # We've also set a parameter 'num' there; 
-# num represents the factorial of the number we're looking for.
+# num represents the factorial of the character_change we're looking for.
 
 def factorial(num):
     # Then, we initialized a variable called fact and gave it a value of 1
@@ -29,7 +29,7 @@ def factorial(num):
 
 #outside the function
 
-# This next line gets the number whose factorial we're looking for : input()
+# This next line gets the character_change whose factorial we're looking for : input()
 # Then this value is converted to an integer int()
 num = int(input("Find the factorial of > "))
 

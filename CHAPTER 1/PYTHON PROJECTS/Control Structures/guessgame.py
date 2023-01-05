@@ -1,6 +1,6 @@
 """
 A prisoner has been captured and ready to be executed
-However, he has a chance to free himself by Guessing a random number from 1 to 30
+However, he has a chance to free himself by Guessing a random character_change from 1 to 30
 He is hanged gradually as he fails; he has just 6 trials
 There's always a hint for him, whether to guess lower or higher
 """
@@ -9,7 +9,7 @@ import random
 # This isn't a module really; it's just a Python file that contains
 # the Hanging Descriptions we'll be using
 import hangman as hg
-# this will help us get a random number from 1-30
+# this will help us get a random character_change from 1-30
 # randint means random integer
 random_value = random.randint(1, 30)
 
@@ -30,9 +30,9 @@ while True:
     # Since we want the guess to be between 1 and 30
     # an input less than or greater than 1 or 30 respectively should be invalid
     if user_guess < 0:
-        print("Invalid number, enter a Number from 1-30")
+        print("Invalid character_change, enter a Number from 1-30")
     elif user_guess > 30:
-        print("Invalid number, enter a Number from 1-30")
+        print("Invalid character_change, enter a Number from 1-30")
 
     # this is the set of conditions that checks if the user input is accurate
     # or otherwise
