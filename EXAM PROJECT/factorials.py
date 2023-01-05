@@ -1,7 +1,7 @@
 """
 Factorial in mathematics is the result of multiplying
-consecutive INTEGERS from 1 to the given character_change.
-It's denoted with '!'
+consecutive INTEGERS from 1 to the given number.
+in maths, it's denoted with '!'
 as in; n! = 1 * 2 * 3 * (n-1) * n
 """
 
