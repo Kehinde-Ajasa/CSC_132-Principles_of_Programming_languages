@@ -14,7 +14,7 @@ been caught"""
 
 """"In python Try and Except are used in catching errors or bugs in codes here is how it works"""
 
-"""Program for getting the nth term of an Arithmetic Progression"""
+"""Program for getting the amount of  term in an Arithmetic Progression"""
 try:
     def get_inputs():
         """Section of code used to accept all user's inputs."""
