@@ -24,10 +24,19 @@ try:
         return first_term, common_diff, last_term
 
 
-    print(get_inputs())
+    def get_nth_term(values):
+        """Main Logic of the project runs here"""
+        amount_of_terms = 1
+        my_data = list(values)
+        for csc in range(my_data[0], my_data[2], my_data[1]):
+            amount_of_terms += 1
+        return amount_of_terms
+
+    print(get_nth_term(get_inputs()))
 except ValueError:
     def try_again():
         """Piece of code to help re-accept user's inputs"""
         print("Oops Invalid Input entered, Only Whole numbers are allowed. Try again")
         return get_inputs()
     print(try_again())
+
