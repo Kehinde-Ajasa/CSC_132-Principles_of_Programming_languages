@@ -2,7 +2,7 @@
 Factorial in mathematics is the result of multiplying
 consecutive INTEGERS from 1 to the given number.
 in maths, it's denoted with '!'
-as in; n! = 1 * 2 * 3 * (n-1) * n
+as in; n! = 1 * 2 * 3 * 4 * (n-1) * n
 """
 
 # First, we create a Function; called Factorial
