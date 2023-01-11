@@ -1,0 +1,24 @@
+#CONTROL STRUCTURES
+Control structures or control statement are statements or block of code in a programming language that allow the programmer direct the order or flow of execution of a program,they are also used to specify the logical aspect of the program
+
+##TYPES OF CONTROL STRUCTURES
+- Conditional Statements
+- Loops
+- Functions
+
+
+###CONDITIONAL STATEMENTS
+Conditional statements are statements that define the logical aspect of the program, they allow certain parts of the code to run or produce certain result based on the condition placed in the program. Note that the result of conditional statements are boolean(True or False) we can do this by using 'if' statement, 'elif'(short for else if) statement and 'else' statement
+
+- python code
+gender = 'male'
+if gender == 'male':
+    print('Sir')
+else:
+    print('Ma')
+
+The above code compares the value of the variable gender using the comparison operator(==) width the string ('male') if True print sir meaning if the value of the variable matches that of the string print 'sir' else print 'ma' 
+
+A ROCK PAPER SCISSORS game has been created for you with **PYTHON** to fully understand the concept of conditional statement. See conditional.py
+
+
