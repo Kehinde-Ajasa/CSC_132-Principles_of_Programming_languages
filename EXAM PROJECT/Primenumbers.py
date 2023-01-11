@@ -17,6 +17,6 @@ def is_prime_number(user_input):
         for i in range(2, user_input):
             remainder_list.append(user_input % i)  # adding the remainder of the loop to a list
         if 0 in remainder_list:
-            return 0  # false the user_number is not a prime number
+            return 0  # false the user_number is not a prime character_change
         else:
-            return 1  # True the user_number is a prime number
+            return 1  # True the user_number is a prime character_change

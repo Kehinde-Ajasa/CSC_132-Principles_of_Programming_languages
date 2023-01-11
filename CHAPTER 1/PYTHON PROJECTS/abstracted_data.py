@@ -6,6 +6,8 @@
 """Data abstraction or encapsulation is a programming language principle of hiding data 
 using functions, libraries and modules, this gives room for flexibility of programmers
 and writing readable and clean codes."""
+
+
 def get_range(user_list):
     """This function is used to get the range of a particular set of data (numbers)."""
 
