@@ -22,3 +22,6 @@ The above code compares the value of the variable gender using the comparison op
 A ROCK PAPER SCISSORS game has been created for you with **PYTHON** to fully understand the concept of conditional statement. See conditional.py
 
 
+### Loops
+
+
