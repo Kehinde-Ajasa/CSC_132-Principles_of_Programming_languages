@@ -9,7 +9,7 @@ def get_input():
     if len(character) > 1:
         return "Invalid character entered the values of the character can only be 1 letter long"
     else:
-        return star, characterjf
+        return star, character
 
 
 
