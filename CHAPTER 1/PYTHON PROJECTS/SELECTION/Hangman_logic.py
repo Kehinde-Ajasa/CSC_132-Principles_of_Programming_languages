@@ -8,7 +8,7 @@ There's always a hint for him, whether to guess lower or higher
 import random
 # This isn't a module really; it's just a Python file that contains
 # the Hanging Descriptions we'll be using
-import hangman as hg
+import Hangman_diagram as hg
 # this will help us get a random number from 1-30
 # randint means random integer
 random_value = random.randint(1, 30)
