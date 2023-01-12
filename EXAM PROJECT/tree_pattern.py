@@ -1,7 +1,11 @@
+"""This Program helps in printing out the pattern of a tree"""
+
+
 def get_input():
     """This function gets the height of the tree from the user"""
     height_of_star = int(input('how big do u want the star'))
     return height_of_star
+
 
 def top_part(height):
     """This function creates the tree and add the trunk to make it look nice"""
