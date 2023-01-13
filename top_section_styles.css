@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+}
+.header{
+    color: purple;
+    text-align: center;
+}
+
+.ppl{
+    color: white;
+    text-align: left;
+    font-size: 3 rem;
+}
+
+.about{
+    color: white;
+    text-align: right;
+    height: 100;
+    font-size: 2rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
