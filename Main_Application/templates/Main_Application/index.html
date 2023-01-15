@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSC_132</title>
+    <link rel="stylesheet" href="{% static 'Main_Application/styles.css' %}">
+    <script src="{% static 'Main_Application/index.js' %}"></script>
+</head>
+<body class="container">
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="header">
+            <h1> <span>< /></span> CSC132</h1>
+        </div>
+        <div class="main">
+            <div class="hero_left left">
+                <h1>Principles of Programming Languages</h1>
+            </div>
+            <div class="hero_right right">
+               <p>Creating the future by teaching students the art of Programming</p>
+               <a href="https://github.com/Kehinde-Ajasa/CSC_132-Principles_of_Programming_languages" target="blank"><button><b>Visit Github</b></button></a>
+            </div>
+        </div>
+    </section>
+    <!-- LANGUAGE ICONS -->
+    <section class="icons">
+        <div class="marquee-icon-track">
+            <div class="marquee-icon">
+                <img src="{% static 'Main_Application/images/c_logo.png' %}" alt="">
+            </div>
+            <div class="marquee-icon">
+                <img src="{% static 'Main_Application/images/html_logo.png' %}" alt="">
+            </div>
+            <div class="marquee-icon">
+                <img src="{% static 'Main_Application/images/js_logo.png' %}" alt="">
+            </div>
+            <div class="marquee-icon">
+                <img src="{% static 'Main_Application/images/py_logo.png' %}" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- projects -->
+    <div class="project-container">
+        <div class="projects">
+            <div class="project">
+                <div class="img-project">
+                    <img src="{% static 'Main_Application/images/rps.png' %}" alt="">
+                </div>
+                <figcaption>Rock Paper Scissors</figcaption>
+                <div class="btn_div">
+                    <a href="{% static 'Main_Application/projects/rock-paper-scissors/rock-paper-scissors.py' %}" download="RockPaperScissors"><button>Download Code</button></a>
+                </div>
+            </div>
+            <div class="project">
+                <div class="img-project">
+                    <img src="{% static 'Main_Application/images/prime.jpeg' %}" alt="">
+                </div>
+                <figcaption>Prime Numbers</figcaption>
+                <div class="btn_div">
+                    <a href="{% static 'Main_Application/projects/prime-numbers/Primenumbers.py' %}" download="PrimeNumbers"><button>Download Code</button></a>
+                </div>   
+            </div>
+            <div class="project">
+                <div class="img-project">
+                    <img src="{% static 'Main_Application/images/guess.png' %}" alt="">
+                </div>
+                <figcaption>Guessing Game</figcaption>
+                <div class="btn_div">
+                    <a href="{% static 'Main_Application/projects/guessing/Hangman_logic.py' %}" download="Hang-Man"><button>Download Code</button> </a>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <!-- collaborators -->
+    <section class="collaborators">
+        <h2>COLLABORATORS</h2>
+        <main>
+            <div class="animation">
+                <div class="collaborator">
+                    <img src="{% static 'Main_Application/images/techwithken.jpeg' %}" alt="collaborator_profile pics">
+                    <p>Tech With Ken</p>
+                </div>
+                <div class="collaborator">
+                    <img src="{% static 'Main_Application/images/jedytech.jpg' %}" alt="collaborator_profile pics">
+                    <p>Jedy Tech</p>
+                </div>
+                <div class="collaborator">
+                    <img src="{% static 'Main_Application/images/mayowa.jpeg' %}" alt="collaborator_profile pics">
+                    <p>Mayowa</p>
+                </div>
+                <div class="collaborator">
+                    <img src="{% static 'Main_Application/images/steloybits.jpeg' %}" alt="collaborator_profile pics">
+                    <p>SteloyBits</p>
+                </div>
+            </div>
+        </main>
+    </section>
+    <!-- footer -->
+    <footer>
+        <h1> <span>< /></span> CSC132</h1>
+        <main>
+            <div class="left">
+                <link rel="stylesheet" href="mailto:sojapril16@gmail.com">
+                <a href="mailto:ti664469@gmail.com">support@gmail.com</a>
+                <div>
+                    <img src="{% static 'Main_Application/images/icon-facebook.svg' %}" alt="facebook logo">
+                    <img src="{% static 'Main_Application/images/icon-instagram.svg' %}" alt="instagram logo">
+                    <img src="{% static 'Main_Application/images/icon-twitter.svg' %}" alt="twitter logo">
+                </div>
+            </div>
+            <div class="right">
+                <h4>Let's keep in touch!</h4>
+                <p>To receive tips on how to grow our community. We'll never send you spam or pass on your email address</p>
+                <form action="{% url 'index' %}" method="POST">
+                    {% csrf_token %}
+                    <input name="user_email" required type="email" placeholder="yourgmail@gmail.com">
+                    <input type="submit">
+                </form>
+            </div>
+        </main>
+        <h2 class="last-header"> <span>< /></span> CSC132</h2>
+        <hr>
+        <p class="last">Made with ❤ and ⚡ by  Our Collaborators</p>
+    </footer>
+</body>
+</html>
