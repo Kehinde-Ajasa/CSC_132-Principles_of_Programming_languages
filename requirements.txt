@@ -7,11 +7,6 @@ docutils==0.19
 et-xmlfile==1.1.0
 gunicorn==20.1.0
 idna==3.3
-Kivy==2.1.0
-kivy-deps.angle==0.3.3
-kivy-deps.glew==0.3.1
-kivy-deps.sdl2==0.4.5
-Kivy-Garden==0.1.5
 openpyxl==3.0.10
 packaging==23.0
 Pygments==2.13.0
