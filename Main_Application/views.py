@@ -10,5 +10,6 @@ def index(request):
         user.save()
     return render(request,'Main_Application/index.html')
 
-def admin(request):
-    pass
+def csc_admin(request):
+    userEmails = User.objects.all()
+    return render(request,'Main_Application/csc-admin.html',{'userEmails':userEmails})
