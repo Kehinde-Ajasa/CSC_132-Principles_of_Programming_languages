@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'CSC_132_WEB_APP.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
@@ -90,7 +90,7 @@ DATABASES = {
         'HOST': 'containers-us-west-142.railway.app',
         'PORT': '7302',
     }
-}
+}"""
 
 
 # Password validation
