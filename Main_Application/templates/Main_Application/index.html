@@ -21,7 +21,7 @@
                 <h1>Principles of Programming Languages</h1>
             </div>
             <div class="hero_right right">
-               <p>Creating the future of Technology by teaching students the Art of Programming</p>
+               <p>Creating the future of Technology by teaching students the art of Programming</p>
                <a href="https://github.com/Kehinde-Ajasa/CSC_132-Principles_of_Programming_languages" target = "blank"><button><b>Visit Github</b></button></a>
             </div>
         </div>
@@ -81,12 +81,8 @@
         <main>
             <div class="animation">
                 <div class="collaborator">
-                    <a href = "https://github.com/Kehinde-Ajasa" target = "blank">
-                        <img src="{% static 'Main_Application/images/techwithken.jpeg' %}" alt="collaborator_profile pics">
-                        
-                    </a>
-                    <p>Tech With Ken</p>
-                    
+                    <img src="{% static 'Main_Application/images/techwithken.jpeg' %}" alt="collaborator_profile pics">
+                    <p>Tech with Ken</p>
                 </div>
                 <div class="collaborator">
                     <a href = "https://github.com/okondev2021" target = "blank">
@@ -128,7 +124,7 @@
             </div>
             <div class="right">
                 <h4>Let's keep in touch</h4>
-                <p>To receive tips on how to grow Our community. We'll never send Unrelated memo to your email address</p>
+                <p>To receive tips on how to grow your community. We'll never send you spam or pass on your email address</p>
                 <form action="{% url 'index' %}" method="POST">
                     {% csrf_token %}
                     <input name="user_email" required type="email" placeholder="yourgmail@gmail.com">

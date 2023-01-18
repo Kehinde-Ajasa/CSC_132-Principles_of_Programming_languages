@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSC_132</title>
+    <link rel="stylesheet" href="{% static 'Main_Application/admin.css' %}">
+    <script src="{% static 'Main_Application/admin.js' %}"></script>
+</head>
+<body>
+    <noscript>
+        <h2>Enable Javascript to access this page</h2>
+        <a href="{% url 'index' %}">Go Home</a>
+        <style>
+            .container{
+                display: none
+            }
+        </style>
+    </noscript>
+    <div class="container">
+        <div class="top_nav">
+            <div class="left">
+                <h1>Audiophile administration</h1>
+            </div>
+            <div class="right">
+                <h1>Welcome, <span>{{request.user}}</span>. <a href="{% url 'index' %}">view site</a>Admin-site</a></h1>
+            </div>
+        </div>
+        <main id="adminproduct">
+            <div style="color: white;padding-top:2em " class="user">
+                {% for userEmail in userEmails %}
+                    <div style="margin-bottom: 1em">
+                        <p>User: {{userEmail.Email}}</p>
+                    </div>
+                {% empty %}
+                    <p>No user yet </p>
+                {% endfor %}
+            </div>
+        </main>
+    </div>
+</body>
+</html>
