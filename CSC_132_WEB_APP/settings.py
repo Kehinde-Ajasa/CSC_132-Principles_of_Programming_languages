@@ -29,7 +29,7 @@ DEBUG = True
 =======
 >>>>>>> ae29ad2af7d3d116c967758bd7b4fe7fafb47b6f
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
