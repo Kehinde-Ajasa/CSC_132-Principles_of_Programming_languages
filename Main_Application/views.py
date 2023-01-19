@@ -28,7 +28,7 @@ def index(request):
     if request.method == 'POST':
         email = request.POST['user_email']
         user = User.objects.create(Email = email)
-        print(sending_email(user))
+        print(sending_email(email))
         user.save()
     return render(request,'Main_Application/index.html')
 
