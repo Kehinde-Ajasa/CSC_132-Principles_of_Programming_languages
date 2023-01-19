@@ -11,7 +11,8 @@ def sending_email(mail):
     email_password = "avwpgyatfxhdcogw"
     email_receiver = mail
     subject = "Confirmation Mail"
-    body = """Your registration email and process has been confirmed"""
+    body = """Your Email and registration process has been confirmed.
+    Thank you for using our Software."""
     em = EmailMessage()
     em["From"] = email_sender
     em["To"] = email_receiver
