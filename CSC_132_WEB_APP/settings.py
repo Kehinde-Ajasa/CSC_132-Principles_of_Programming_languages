@@ -30,7 +30,7 @@ DEBUG = False
 ALLOWED_HOSTS = ["*"]
 
 
-# Application definition
+# Application definitio
 
 INSTALLED_APPS = [
     'Main_Application',
