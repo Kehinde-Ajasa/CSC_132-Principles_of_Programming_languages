@@ -49,6 +49,61 @@
     padding-left: 2em;
     padding-top: 2em
 }
+
+.message_container{
+    display: block
+}
+
+.container .message_container{
+    height: 100vh; 
+    background: black;
+    display: flex;
+    justify-content: center;
+    padding: 0em
+}
+
+.container .message_container form{
+    width: 40%;
+    height: 70%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1em;
+    padding: 2em
+}
+
+.container .message_container form input[type="text"]{
+    height: 60px;;
+    border: 2px solid black;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    font-size: 1.2rem;
+    padding-left: 6px
+}
+
+.container .message_container form textarea{
+    border: 2px solid black;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    font-size: 1.2rem;
+    padding-left: 6px
+}
+
+.container .message_container form input[type="submit"]{
+    border: 2px solid black;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    width: 150px;
+    height: 50px;
+    background: black;
+    color: white;
+
+}
+
+
+
+
 /*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 
 @media (max-width:790px){
@@ -72,6 +127,11 @@
         font-size: 1rem;
         margin-top: 0.6em
     }  
+
+    .container .message_container form{
+        width: 60%;
+        height: 70%;
+    }
 
 
 }
@@ -103,6 +163,11 @@
         font-weight: lighter;
         font-size: 1rem;
         margin-top: 0.6em
+    }
+
+    .container .message_container form{
+        width: 80%;
+        height: 70%;
     }
 
 

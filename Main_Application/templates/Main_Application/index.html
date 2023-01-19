@@ -83,29 +83,26 @@
                     <a href = "https://github.com/Kehinde-Ajasa">
                         <img src="{% static 'Main_Application/images/techwithken.jpeg' %}" alt="collaborator_profile pics">
                     </a>
-                    <p>Tech with Ken</p>
+                    <p><a href="https://github.com/Kehinde-Ajasa">Tech with Ken</a></p>
                 </div>
                 <div class="collaborator">
                     <a href = "https://github.com/okondev2021" target = "blank">
-                        <img src="{% static 'Main_Application/images/jedytech.jpg' %}" alt="collaborator_profile pics">
-                      
+                        <img src="{% static 'Main_Application/images/jedytech.jpg' %}" alt="collaborator_profile pics"> 
                     </a>
-                    <p>Jedy Tech</p>
+                    <p><a href="https://github.com/okondev2021">Jedy Tech</a></p>
     
                 </div>
                 <div class="collaborator">
                     <a href = "https://github.com/Crane04" target = "blank">
-                        <img src="{% static 'Main_Application/images/mayowa.jpeg' %}" alt="collaborator_profile pics">
-                        
+                        <img src="{% static 'Main_Application/images/mayowa.jpeg' %}" alt="collaborator_profile pics">    
                     </a>
-                    <p>Mayowa</p>
+                    <p><a href="https://github.com/Crane04">Mayowa</a></p>
                 </div>
                 <div class="collaborator">
                     <a href = "https://github.com/SteloyBits" target = "blank">
-                        <img src="{% static 'Main_Application/images/steloybits.jpeg' %}" alt="collaborator_profile pics">
-                        
+                        <img src="{% static 'Main_Application/images/steloybits.jpeg' %}" alt="collaborator_profile pics">                      
                     </a>
-                    <p>SteloyBits</p>
+                    <p><a href="https://github.com/SteloyBits">SteloyBits</a></p>
                 </div>
             </div>
         </main>
@@ -118,24 +115,31 @@
                 <link rel="stylesheet" href="mailto:sojapril16@gmail.com">
                 <a href="mailto:ti664469@gmail.com">support@gmail.com</a>
                 <div>
-                    <img src="{% static 'Main_Application/images/icon-facebook.svg' %}" alt="facebook logo">
-                    <img src="{% static 'Main_Application/images/icon-instagram.svg' %}" alt="instagram logo">
-                    <img src="{% static 'Main_Application/images/icon-twitter.svg' %}" alt="twitter logo">
+                    <a href="" ><img src="{% static 'Main_Application/images/icon-facebook.svg' %}" alt="facebook logo"></a>
+                    <a href="https://twitter.com/Tech_With_Ken?s=09"  ><img src="{% static 'Main_Application/images/icon-twitter.svg' %}" alt="twitter logo"></a>
                 </div>
             </div>
             <div class="right">
                 <h4>Let's keep in touch</h4>
-                <p>To receive tips and information on latest updates. We will never send in spam mails</p>
+                <p>To receive tips on how to grow your community. We'll never send you spam or pass on your email address</p>
                 <form action="{% url 'index' %}" method="POST">
                     {% csrf_token %}
-                    <input name="user_email" required type="email" placeholder="yourgmail@gmail.com">
-                    <input type="submit">
+                    {% for msg in messages %}
+                        <p style="color: #994AEE;">{{msg}}</p>
+                    {% endfor %}
+                    <div class="input_fields">
+                        <input name="user_name" required type="text" placeholder="Your username">
+                        <input name="user_email" required type="email" placeholder="yourgmail@gmail.com">
+                    </div>
+                    <div class="input_submit">
+                        <input type="submit">
+                    </div>
                 </form>
             </div>
         </main>
         <h2 class="last-header"> <span>< /></span> CSC132</h2>
         <hr>
-        <p class="last">Made with ❤ and ⚡ by Our Collaborators</p>
+        <p class="last">Made with ❤ and ⚡ by CSC-132 DEVS</p>
     </footer>
 </body>
 </html>

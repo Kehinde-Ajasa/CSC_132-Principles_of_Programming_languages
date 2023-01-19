@@ -15,7 +15,6 @@
 .container .hero{
     height: 100vh;
     padding: 2em 6em;
-    overflow: hidden;
 }
 
 .container .hero .header{
@@ -183,8 +182,6 @@
 
 /* collaborators */
 
-
-
 .container .collaborators{
     padding: 2em 0em;
     padding-bottom: 4em;
@@ -212,7 +209,6 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    animation: marquee 10s linear infinite;
 }
 
 .container .collaborators main .collaborator img{
@@ -223,22 +219,18 @@
 
 .container .collaborators main .animation .collaborator p{
     margin-top: 10px;
-    color: #fff;
+    color: #994AEE;
     font-weight: bold;
     font-size: 1.2rem;
-    text-align: center
+    text-align: center;
+    cursor: pointer;
 }
 
-/* animation */
-/*@keyframes marquee{
-    from{
-       transform: translateX(100%)
-    }
 
-    to{
-        transform: translateX(-100%)
-    }
-}*/
+.container .collaborators main .animation .collaborator p a{
+    color: #7000FF;
+    text-decoration: none
+}
 
 /* footer */
 .container footer{
@@ -285,7 +277,8 @@
 }
 
 .container footer main .right{
-    justify-self: flex-end;
+    display: flex;
+    flex-direction: column;
 }
 
 .container footer main .right h4{
@@ -300,16 +293,23 @@
     font-weight: bold;
     font-size: 1rem;
     margin-top: 1em;
-    width: 70%
+    width: 100%
 }
 
 .container footer main .right form{
     margin-top: 1em;
+    width: 100%
 }
 
-.container footer main .right form input[type="email"]{
+.container footer main .right form .input_fields{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em
+}
+
+.container footer main .right form input{
     height: 60px;
-    width: 300px;
+    width: 100%;
     border-radius: 6px;
     border: none;
     outline: none;
@@ -318,8 +318,16 @@
     cursor: pointer;
 }
 
-.container footer main .right form input[type="email"]::placeholder{
-    font-size: 1rem
+.container footer main .right form input::placeholder{
+    font-size: 1rem   
+}
+
+.input_submit{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    padding-top: 1em;
 }
 
 .container footer main .right form input[type="submit"]{
@@ -329,10 +337,11 @@
     background:#7000FF;
     color: white;
     height: 60px;
-    width: 20%;
-    margin-left: 1em;
-    font-size: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.2rem;
     cursor: pointer;
+    grid-column: 2
 }
 
 .container footer hr{
@@ -431,8 +440,15 @@
 
     .container .collaborators{
         padding-bottom: 2em;
-
     }
+
+    .container .collaborators main .animation{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 3em;
+        justify-items: center;
+    }
+
 
     /* footer section */
 
@@ -452,7 +468,8 @@
     .container footer main .right form{
         display: grid;
         grid-template-rows: 1fr 1fr;
-        grid-gap: 0.5em
+        grid-gap: 0.5em;
+        width: 90%
     }
 
     .container footer main .right form input[type="email"]{
@@ -461,7 +478,7 @@
 
     .container footer main .right form input[type="submit"]{
         justify-self: flex-end;
-        width: 40%;
+        width: 100%;
     }
 
 }
@@ -495,7 +512,7 @@
 
     .container .hero .main .right p{
         font-size: 1rem;
-        width: 80%;
+        width: 90%;
     }
 
     /* icons */
@@ -536,7 +553,10 @@
 
     .container .collaborators main .animation{
         width: calc(175px *4);
-        animation: marquee 7s linear infinite;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 3em;
+        justify-items: center;
     }
 
     .container .collaborators main .animation .collaborator img{
@@ -546,6 +566,11 @@
     }
 
     /* footer section */
+
+    .container footer{
+        padding-top: 2em
+    }
+
     .container footer h1{
         display: none
     }
@@ -583,6 +608,17 @@
     
     .container footer main .right{
         grid-row: 1
+    }
+
+    .container footer main .right form {
+        width: 100%;
+    }
+
+    .container footer main .right form .input_submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.3em
     }
 
     .container footer .last{

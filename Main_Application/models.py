@@ -3,7 +3,8 @@ from django.db import models
 # Create your models here.
 
 class User(models.Model):
-    Email = models.EmailField(max_length = 30)
+    Name = models.CharField(max_length = 50,default = 'User')
+    Email = models.EmailField(max_length = 50)
 
     def __str__(self):
-        return self.Email
+        return self.Name

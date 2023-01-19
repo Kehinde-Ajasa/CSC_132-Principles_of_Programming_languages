@@ -22,17 +22,17 @@
     <div class="container">
         <div class="top_nav">
             <div class="left">
-                <h1>CSC_132 Database</h1>
+                <h1>Audiophile administration</h1>
             </div>
             <div class="right">
-                <h1>Welcome, <span>{{request.user}}</span>. <a href="{% url 'index' %}">view site</a>Admin-site</a></h1>
+                <h1>Welcome, ADMIN <a href="{% url 'index' %}">view site</a>Admin-site</a> <a href="{% url 'admin_message' %}">Send Message To Users</a></h1>
             </div>
         </div>
         <main id="adminproduct">
             <div style="color: white;padding-top:2em " class="user">
                 {% for userEmail in userEmails %}
                     <div style="margin-bottom: 1em">
-                        <p>User: {{userEmail.Email}}</p>
+                        <p>{{userEmail.Name}} : {{userEmail.Email}}</p>
                     </div>
                 {% empty %}
                     <p>No user yet </p>

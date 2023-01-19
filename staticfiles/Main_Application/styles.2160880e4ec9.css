@@ -1,0 +1,687 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.container{
+    background: #0F041C;
+    min-height: 100vh;
+}
+
+/* hero */
+
+.container .hero{
+    height: 100vh;
+    padding: 2em 6em;
+}
+
+.container .hero .header{
+    text-align: center;
+    color: white;
+    font-size: 1.5rem
+}
+
+.container .hero .header span{
+    color: #7000FF
+}
+
+.container .hero .main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container .hero .main .left{
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0.6s ease-in 
+}
+
+.container .hero .main .left h1{
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff
+}
+
+.container .hero .main .right{
+    padding-left: 4em;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.6s ease-in 
+}
+
+.container .hero .main .reveal_hero{
+    transform: translateX(0%);
+    opacity: 1;
+    transition: all 0.6s ease-in
+}
+
+.container .hero .main .right p{
+    color: #994AEE;
+    font-size: 1.8rem;
+    font-weight: bold;
+    word-spacing: 0.4em;
+    width: 100%
+}
+
+.container .hero .main .right button{
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #7000FF;
+    margin: 0 auto;
+    margin-top: 1em;;
+    padding: 1em 2em;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* icon */
+
+.container .icons{
+    width: 100%;
+    padding: 2em 0;
+    overflow: hidden;
+    margin: 2em 0
+}
+
+.container .marquee-icon-track{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container .marquee-icon-track:nth-child(1){
+    animation: scroll_icon1 10s linear infinite
+}
+
+.container .marquee-icon-track .marquee-icon{
+    height: 200px;
+}
+
+.container .marquee-icon-track .marquee-icon img{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes scroll_icon1{
+    0%{
+        transform: translateX(110%);
+    }
+
+    100%{
+        transform: translateX(-100%)
+    }
+}
+
+/* project */
+
+.container .project-container{
+    background: #0D0D0D;
+    padding: 4em 6em
+}
+
+.container .project-container .projects{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em
+}
+
+
+.container .project-container .projects .project {
+    transform: translateY(50%);
+    opacity: 0;
+    transition: all 2s ease-in-out
+}
+
+.container .project-container .projects .reveal_projects{
+    opacity: 1;
+    transform: translateY(0%)
+}
+
+.container .project-container .projects .project div img{
+    height:300px;
+    width: 100%;
+    object-fit: cover
+}
+
+.container .project-container .projects .project figcaption{
+    color: #7000FF;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 1em;
+}
+
+.container .project-container .projects .project .btn_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%
+}
+
+.container .project-container .projects .project button{
+    background:  #7000FF;
+    outline: none;
+    color: white;
+    border: none;
+    width: 200px;
+    height: 50px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+/* collaborators */
+
+.container .collaborators{
+    padding: 2em 0em;
+    padding-bottom: 4em;
+    overflow: hidden;
+    background: #17121B;
+    min-height: 40vh
+}
+
+.container .collaborators h2{
+    color: #fff;
+    text-align: center;
+    font-size: 3rem
+}
+
+.container .collaborators main{
+    padding: 2em 0em;
+    padding-top: 3em;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center
+}
+
+.container .collaborators main .animation{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.container .collaborators main .collaborator img{
+    height: 250px;
+    border-radius: 50%;
+    cursor: pointer
+} 
+
+.container .collaborators main .animation .collaborator p{
+    margin-top: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.container .collaborators main .animation .collaborator p a{
+    color: #7000FF;
+    text-decoration: none
+}
+
+/* footer */
+.container footer{
+    background: #272727;
+    padding: 2em 6em
+}
+
+.container footer h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: white
+}
+
+.container footer h1 span{
+    color: #7000FF;
+    font-weight: 900
+}
+
+.last-header{
+    display: none
+}
+.container footer main{
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container footer main .left{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 4em
+}  
+
+.container footer main .left a{
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-decoration: none
+}
+
+.container footer main .left div img{
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.container footer main .right{
+    display: flex;
+    flex-direction: column;
+}
+
+.container footer main .right h4{
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.container footer main .right p{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 1em;
+    width: 100%
+}
+
+.container footer main .right form{
+    margin-top: 1em;
+    width: 100%
+}
+
+.container footer main .right form .input_fields{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em
+}
+
+.container footer main .right form input{
+    height: 60px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 16px;
+    cursor: pointer;
+}
+
+.container footer main .right form input::placeholder{
+    font-size: 1rem   
+}
+
+.input_submit{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    padding-top: 1em;
+}
+
+.container footer main .right form input[type="submit"]{
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background:#7000FF;
+    color: white;
+    height: 60px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    cursor: pointer;
+    grid-column: 2
+}
+
+.container footer hr{
+    margin-top: 2em
+}
+
+.container footer .last{
+    text-align: center;
+    margin-top: 2em;
+    color:  #994AEE;
+    font-weight: bold
+}
+
+@media (max-width:1070px){
+
+    .container .hero{
+        height: 100vh;
+        padding: 2em 3em
+    }
+
+    .container .hero .main .left h1{
+        font-size: 4rem;
+    }
+
+    .container .hero .main .right{
+        padding-left: 6em;
+    }
+
+    .container .hero .main .right p{
+        color: #994AEE;
+        font-size: 1.5rem;
+    }
+
+    /* project */
+
+
+    .container .project-container{
+        background: #0D0D0D;
+        padding: 4em 3em
+    }
+
+    /* collaborators */
+
+    .container .collaborators main .collaborator img{
+        height: 200px;
+    } 
+    
+}
+
+@media (max-width:768px){
+
+    /* hero */
+
+    .container .hero{
+        height: 100%;
+    }
+
+    .container .hero .main{
+        display: block;
+        margin-top: 3em;
+    }
+
+    .container .hero .main .left h1{
+        font-size: 3rem;
+        width: 90%
+    }
+
+    .container .hero .main .right{
+        padding-left: 0em;
+        margin-top: 2em
+    }
+
+    .container .hero .main .right p{
+        width: 70%;
+        margin-top: 0em
+    }
+
+    /* icons */
+
+    .container .marquee-icon-track .marquee-icon{
+        height: 150px;
+    }
+    
+    .container .marquee-icon-track .marquee-icon img{
+        width: 100%;
+        height: 100%
+    }
+
+    /* projects */
+
+    .container .project-container{
+        padding: 4em 2em
+    }
+
+    /* collaborators */
+
+    .container .collaborators{
+        padding-bottom: 2em;
+    }
+
+    .container .collaborators main .animation{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 3em;
+        justify-items: center;
+    }
+
+
+    /* footer section */
+
+    .container footer{
+        background: #272727;
+        padding: 2em 
+    }
+
+    .container footer main .left a{
+        font-size: 1.2rem;
+    }
+
+    .container footer main .right p{
+        width: 100%
+    }    
+
+    .container footer main .right form{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0.5em;
+        width: 90%
+    }
+
+    .container footer main .right form input[type="email"]{
+        width: 100%
+    }
+
+    .container footer main .right form input[type="submit"]{
+        justify-self: flex-end;
+        width: 100%;
+    }
+
+}
+
+@media (max-width:600px){
+
+    /* hero */
+
+    .container .hero{
+        padding: 2em 0em;
+        height: 100%;
+    }
+
+    .container .hero .header{
+        font-size: 1.2rem
+    }
+    
+    .container .hero .main{
+        padding-left: 2em
+    }
+
+    .container .hero .main .left h1{
+        font-size: 2.5rem;
+        width: 100%
+    }
+
+    .container .hero .main .right{
+        padding-left: 0em;
+        margin-top: 2em
+    }
+
+    .container .hero .main .right p{
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    /* icons */
+
+    .container .icons{
+        padding: 3em 0;
+        margin: 0em
+    }
+
+    .container .marquee-icon-track{
+        width: calc(125px *4);
+    }
+
+    .container .marquee-icon-track .marquee-icon{
+        width: 100px;
+        height: auto;
+        margin-right: 0px
+    }
+
+    .container .marquee-icon-track .marquee-icon img{
+        width: 100%;
+        height: 100%
+    }
+    
+    /* project */
+    .container .project-container .projects{
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-gap: 3em
+    }
+
+    /* collaborator */
+    
+    .container .collaborators h2{
+        font-size: 1.5rem
+    }
+
+    .container .collaborators main .animation{
+        width: calc(175px *4);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 3em;
+        justify-items: center;
+    }
+
+    .container .collaborators main .animation .collaborator img{
+        width: 160px;
+        height: auto;
+        margin-right: 15px
+    }
+
+    /* footer section */
+
+    .container footer{
+        padding-top: 2em
+    }
+
+    .container footer h1{
+        display: none
+    }
+
+    .last-header{
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;text-align: center;
+    }
+
+    .last-header span{
+        color: #7000FF;
+        font-weight: 900
+    }
+
+    .container footer main{
+        margin-top: 0em;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.3fr;
+        grid-gap: 1em;
+        margin-bottom: 2em
+    }
+
+    .container footer main .left{
+        display: block;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1em
+    }
+    
+    .container footer main .right{
+        grid-row: 1
+    }
+
+    .container footer main .right form {
+        width: 100%;
+    }
+
+    .container footer main .right form .input_submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.3em
+    }
+
+    .container footer .last{
+        font-size: 0.9rem;
+    }
+    
+}
+
+@media (max-width:500px) and (orientation:landscape){
+    .container .collaborators main{
+        width: 800px;
+    }
+
+    .container .collaborators h2{
+        font-size: 1.5rem
+    }
+
+    .container .collaborators main .collaborator img{
+        width: 200px;
+        height: auto;
+    }
+
+    /* footer section */
+    .container footer h1{
+        display: none
+    }
+
+    .last-header{
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;text-align: center;
+    }
+
+    .last-header span{
+        color: #7000FF;
+        font-weight: 900
+    }
+
+    .container footer main{
+        margin-top: 0em;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.3fr;
+        grid-gap: 1em;
+        margin-bottom: 2em
+    }
+
+    .container footer main .left{
+        display: block;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1em
+    }
+    
+    .container footer main .right{
+        grid-row: 1
+    }
+
+    .container footer .last{
+        font-size: 0.9rem;
+    }
+}
