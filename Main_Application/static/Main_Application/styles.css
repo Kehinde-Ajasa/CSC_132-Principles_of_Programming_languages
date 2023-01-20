@@ -330,7 +330,7 @@
     padding-top: 1em;
 }
 
-.container footer main .right form input[type="submit"]{
+.container footer main .right form #submit_btn{
     border-radius: 6px;
     border: none;
     outline: none;
@@ -476,7 +476,7 @@
         width: 100%
     }
 
-    .container footer main .right form input[type="submit"]{
+    .container footer main .right form #submit_btn{
         justify-self: flex-end;
         width: 100%;
     }

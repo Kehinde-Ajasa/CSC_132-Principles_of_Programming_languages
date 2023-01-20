@@ -124,15 +124,13 @@
                 <p>To receive tips on how to grow your community. We'll never send you spam or pass on your email address</p>
                 <form action="{% url 'index' %}" method="POST">
                     {% csrf_token %}
-                    {% for msg in messages %}
-                        <p style="color: #994AEE;">{{msg}}</p>
-                    {% endfor %}
+                    <p class="confirmation_text"></p>
                     <div class="input_fields">
-                        <input name="user_name" required type="text" placeholder="Your username">
-                        <input name="user_email" required type="email" placeholder="yourgmail@gmail.com">
+                        <input id="username" name="user_name" required type="text" placeholder="Your username">
+                        <input id="useremail" name="user_email" required type="email" placeholder="yourgmail@gmail.com">
                     </div>
                     <div class="input_submit">
-                        <input type="submit">
+                        <button id="submit_btn" type="button" >Submit</button>
                     </div>
                 </form>
             </div>

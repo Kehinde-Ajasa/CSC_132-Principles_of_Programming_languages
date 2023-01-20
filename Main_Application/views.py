@@ -1,9 +1,12 @@
 from django.shortcuts import render
 from . models import User
 from email.message import EmailMessage
+from django.http import HttpResponse,JsonResponse
 import ssl
 import smtplib
 from django.contrib import messages
+from django.views.decorators.csrf import csrf_exempt
+import json
 # Create your views here.
 
 def sending_email(mail,name):
@@ -25,14 +28,21 @@ def sending_email(mail,name):
         smtp.sendmail(email_sender, email_receiver, em.as_string())
 
 def index(request):
-    if request.method == 'POST':
-        username =  request.POST['user_name']
-        useremail = request.POST['user_email']
-        user = User.objects.create(Name = username, Email = useremail)
-        print(sending_email(useremail,username))
-        messages.info(request,'Thank you, your email is being confirmed')   
-        user.save()
     return render(request,'Main_Application/index.html')
+
+@csrf_exempt
+def save_user(request):
+        user = User.objects.all()
+        if request.method == 'POST':
+                data = json.loads(request.body)
+                field1_Name = data.get('Name')
+                field2_Email  = data.get('Email')
+                user_saved = User.objects.create(Name = field1_Name, Email =field2_Email)
+                # print(sending_email(useremail,username))
+                user_saved.save()
+                return JsonResponse({'message': 1})
+        else:
+                return JsonResponse({'message': 0})
 
 def sending_general_email(email_receivers,email_subject,email_body):
         for email_receiver in email_receivers:
