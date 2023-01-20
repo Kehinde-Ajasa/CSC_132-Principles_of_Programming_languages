@@ -38,7 +38,7 @@ def save_user(request):
                 field1_Name = data.get('Name')
                 field2_Email  = data.get('Email')
                 user_saved = User.objects.create(Name = field1_Name, Email =field2_Email)
-                # print(sending_email(useremail,username))
+                print(sending_email(useremail,username))
                 user_saved.save()
                 return JsonResponse({'message': 1})
         else:
